@@ -1,0 +1,16 @@
+# Data files
+data/raw/
+data/processed/
+*.csv
+*.db
+*.sqlite
+
+# Power BI files
+*.pbix
+
+# Virtual Environments
+venv/
+.env
+
+# Jupyter Checkpoints
+.ipynb_checkpoints/
