@@ -37,4 +37,18 @@ Before writing SQL aggregations, the domain context and North Star metrics were 
 
 | SQL Query Focus | Metric & Dimension | The Finding | Relevant Stakeholder | Domain Context (Why it matters) |
 | :--- | :--- | :--- | :--- | :--- |
-| **Notable Segments** (Rep Capacity) | `capacity_score` by `sales_agent` | **Severe isolated rep burnout.** Sales Agent Darcel Schlecht is carrying a massive operational load with a capacity score (5.28M) over 2.5x higher than the next highest rep (2.02M). | Sales Ops / VP of Sales | Darcel is managing 747 total deals while maintaining a competitive 46% win rate. This is textbook structural overload and indicates a severe misallocation of accounts to a single top-performer. |
+| **Aggregates** (Territory Efficiency) | `total_won_revenue` vs `total_deal_volume` by `regional_office` | **Severe Regional Workload Imbalance.** Despite identical headcounts (10 reps per region), the Central office handles 50% more lead volume than the East (3,512 vs 2,291), yet yields lower total revenue and a lower win rate than the West. | VP of Sales / RevOps | Proves the revenue plateau is a territory distribution problem. Headcount is evenly distributed, but lead volume is not. Reps in the Central region are oversaturated, leading to lower conversion efficiency. |
+| **Notable Segments** (Pipeline Utilization) | `active_pipeline` by `sales_agent` | **Artificial Pipeline Bloat.** Top-performing reps are structurally overloaded, with Darcel Schlecht holding 194 active deals simultaneously. Half of the top 10 most overloaded reps sit in the Central region. | Finance (FP&A) | Validates Finance's hesitation to add headcount. Meridian doesn't need to hire more reps; they need to take stalled, active leads away from oversaturated reps in the Central region and reassign them. |
+| **Notable Segments** (Management Bottlenecks) | `assigned_deals` by `manager` in Central Region | **Mismanaged Lead Routing.** Manager Melvin Marxen is routing 747 deals to a single rep (Darcel Schlecht), which is more than double the volume assigned to his next busiest rep (345 deals). | RevOps / VP of Sales | Burnout is not just regional; it is driven by localized manager routing rules. Top performers are being treated as catch-alls for inbound leads, causing massive pipeline bottlenecks. |
+
+---
+
+### Strategic Recommendations
+
+To ensure these data findings translate into tangible business value, the insights have been categorized based on the levers the executive team can actually pull.
+
+| Category | The Finding | The Business Lever | Recommendation |
+| :--- | :--- | :--- | :--- |
+| **Directional** | **Central region volume is 50% higher than the East.** | *Medium Control.* Highlights a broken territory mapping model. | **Redraw Territory Lines.** Shift lead routing criteria so that border-state inbound leads default to the underutilized East region rather than the flooded Central region. |
+| **Actionable** *(Short-Term)* | **Melvin Marxen is dumping 747 deals onto one rep.** | *High Control.* RevOps controls CRM lead-routing automation. | **Implement Lead Caps.** Institute a hard cap on active pipeline volume (e.g., 80 active deals per rep). Force managers to distribute leads evenly across the team rather than relying solely on top performers. |
+| **Actionable** *(Strategic)* | **Finance refuses to approve headcount.** Data shows current reps are hoarding 100+ active deals. | *High Control.* Sales leadership dictates pipeline cleanup protocols. | **Enforce the "Close-Lost" Rule.** Require reps to immediately close-out stalled deals. Once the artificial bloat is cleared, Finance will have an accurate utilization baseline to approve targeted hiring in the Central region. |
