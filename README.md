@@ -1,9 +1,9 @@
-# Sales Force Capacity & Territory Analytics
+# Meridian IS: Sales Force Capacity & Territory Analytics
 
+## The Business Scenario
 **Project:** B2B Sales Operations Optimization (Meridian IS)  
 **Tools Used:** Python (Pandas), SQL (SQLite), Power BI, DAX  
 
-## The Business Scenario
 Meridian Industrial Solutions (Meridian IS), a leading B2B distributor of heavy industrial equipment, parts, and commercial HVACR components, hit a sudden revenue plateau. The executive team was deadlocked on the cause and the solution:
 * **The VP of Sales** suspected a market cooling and wanted to restructure territories.
 * **The Director of Sales Ops** suspected territory imbalances were burning out top performers.
@@ -39,7 +39,7 @@ Meridian Industrial Solutions (Meridian IS), a leading B2B distributor of heavy 
 
 ## Strategic Recommendations & ROI
 
-The data strongly links Meridian IS's revenue plateau to internal territory imbalances and localized routing bottlenecks—not external market cooling. By pulling the right operational levers, the business can unblock stalled deals and unlock an estimated **$4.93M** in total pipeline value at risk.
+The data strongly links Meridian IS's revenue plateau to internal territory imbalances and localized routing bottlenecks not external market cooling. By pulling the right operational levers, the business can unblock stalled deals and unlock an estimated **$4.93M** in total pipeline value at risk.
 
 | Category | The Finding | The Business Lever | Recommendation |
 | :--- | :--- | :--- | :--- |
