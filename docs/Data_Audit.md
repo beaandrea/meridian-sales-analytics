@@ -4,7 +4,7 @@
 **Dataset:** Maven CRM Sales Opportunities (Raw)  
 
 ### Executive Summary
-The initial audit of the raw CRM extract revealed legacy data entry errors and formatting inconsistencies. Categorical dimensions required text standardization, while core pipeline dates required type conversion. The data was successfully cleaned, augmented with a custom `Capacity Score`, and exported for analysis.
+The initial audit of the raw CRM extract revealed legacy data entry errors and formatting inconsistencies. Categorical dimensions required text standardization, while core pipeline dates required type conversion. The data was successfully cleaned, augmented with a custom `Capacity Score` metric (derived as Active Deal Count ÷ Average Win Rate to surface reps carrying disproportionate workload relative to output), and exported for analysis.
 
 ### Issue Log
 
